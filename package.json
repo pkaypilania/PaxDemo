@@ -2,6 +2,14 @@
   "name": "PaxDemo",
   "version": "0.0.1",
   "private": true,
+  "codegenConfig": {
+    "name": "PaxDemoSpec",
+    "type": "modules",
+    "jsSrcsDir": "src/specs",
+    "android": {
+      "javaPackageName": "com.paxdemo"
+    }
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",

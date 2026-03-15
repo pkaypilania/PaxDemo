@@ -7,7 +7,11 @@ import ReactTestRenderer from 'react-test-renderer';
 import App from '../App';
 
 test('renders correctly', async () => {
+  let tree: ReactTestRenderer.ReactTestRenderer;
+
   await ReactTestRenderer.act(() => {
-    ReactTestRenderer.create(<App />);
+    tree = ReactTestRenderer.create(<App />);
   });
+
+  expect(tree!.toJSON()).toBeTruthy();
 });
